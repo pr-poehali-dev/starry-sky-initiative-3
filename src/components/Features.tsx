@@ -1,25 +1,25 @@
-import { Clock, Layers, Moon, Sparkles } from "lucide-react";
+import Icon from "@/components/ui/icon";
 
 const features = [
   {
-    icon: Clock,
-    title: "Неспешное планирование",
-    description: "Тайм-блоки, которые уважают ваши естественные ритмы. Между задачами всегда есть время на паузу.",
+    icon: "Zap",
+    title: "Энергия и метаболизм",
+    description: "После употребления сахара уровень глюкозы в крови повышается. Организм вырабатывает инсулин, который помогает клеткам усваивать глюкозу. При избытке возникает нагрузка на обмен веществ.",
   },
   {
-    icon: Layers,
-    title: "Фокус на текущем",
-    description: "Видите только то, что важно сейчас. Остальное терпеливо ждёт, пока вы будете готовы.",
+    icon: "Brain",
+    title: "Влияние на мозг",
+    description: "Сахар влияет на работу мозга через дофаминовую систему. Частое употребление сладкого вызывает привыкание — со временем требуется всё больше для получения удовольствия.",
   },
   {
-    icon: Moon,
-    title: "Часы тишины",
-    description: "Автоматические периоды покоя, которые защищают ваше время глубокой работы от отвлечений.",
+    icon: "HeartPulse",
+    title: "Риски для здоровья",
+    description: "Избыток сахара связан с риском ожирения, развитием диабета, ухудшением состояния кожи и быстрой утомляемостью. Важно контролировать его потребление каждый день.",
   },
   {
-    icon: Sparkles,
-    title: "Мягкая аналитика",
-    description: "Вдумчивые наблюдения за вашими паттернами — без осуждения, с поддержкой.",
+    icon: "Eye",
+    title: "Скрытые источники",
+    description: "Сахар содержится не только в сладостях. Он скрыт в соусах, хлебе, йогуртах, соках. 45% опрошенных не знают о скрытых источниках сахара в своём рационе.",
   },
 ];
 
@@ -28,9 +28,9 @@ export function Features() {
     <section id="features" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-20">
-          <span className="text-sm uppercase tracking-widest text-terracotta mb-4 block">Возможности</span>
+          <span className="text-sm uppercase tracking-widest text-terracotta mb-4 block">Ключевые факты</span>
           <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-foreground text-balance">
-            Инструменты, дарящие покой
+            Что мы узнали о сахаре
           </h2>
         </div>
 
@@ -41,7 +41,7 @@ export function Features() {
               className="group p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-sage/30 transition-colors duration-500"
             >
               <div className="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mb-6 group-hover:bg-sage/20 transition-colors duration-500">
-                <feature.icon size={24} className="text-sage" />
+                <Icon name={feature.icon} size={24} className="text-sage" fallback="CircleAlert" />
               </div>
               <h3 className="font-serif text-2xl text-foreground mb-3">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
